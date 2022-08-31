@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.form-control{
+    border-radius: 4px !important;
+}
+
+.filtroLateral .panel-heading{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.owl-theme .owl-nav {
+  justify-content: space-between;
+  display: flex;
+  top: -7em;
+  position: relative;
+}
+:focus-visible, button{
+  outline: none !important;
+}

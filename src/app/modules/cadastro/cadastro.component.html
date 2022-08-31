@@ -1,0 +1,20 @@
+<div role="tabpanel">
+  <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="identificacao">
+        <app-identificacao></app-identificacao>
+      </div>
+  </div>
+</div>
+
+
+<div class="alert alert-danger alert-dismissible" role="alert" style="height:50px; padding-top:13px;" *ngIf="mensagemErro!=''">
+  <button type="button" class="close" data-dismiss="alert" (click)="onFecharAlertErro()"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+  <strong>Atenção!</strong> {{mensagemErro}}
+</div>
+
+<div class="alert alert-success alert-dismissible" role="alert" style="height:50px; padding-top:13px;" *ngIf="mensagemSucesso!=''">
+  <button type="button" class="close" data-dismiss="alert" (click)="onFecharAlertSuccess()"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+  <strong>Atenção!</strong> {{mensagemSucesso}}
+</div>
+
+<ngx-spinner></ngx-spinner>

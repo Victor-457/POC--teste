@@ -1,0 +1,124 @@
+a{
+  text-decoration: none;
+}
+
+.card {
+  text-align: center;
+  padding-top: 1em;
+  border: 1px solid #d5e1ed;
+  transition: all ease-in-out 0.3s;
+  background: #f3f3f3;
+}
+hr{
+  border-color:dodgerblue;
+}
+.card:hover {
+  background: #dbe8fb;
+  border-color: #dbe8fb;
+}
+
+.card-footer {
+
+  border-top: 1px solid rgba(0,0,0,.125);
+}
+
+.btn.btn-link {
+
+  color: #2a6496;
+}
+div.panel-body.card-block.card-body{
+ padding: 0;
+}
+.menuLateral{
+  padding-bottom: 0.5em;
+}
+.menuLateral:hover{
+  width: 100%;
+  font-weight: bolder;
+}
+.badge-secondary{
+  background-color: cadetblue;
+}
+.removerFiltro{
+  border-radius: 50%;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: white;
+  padding: 0;
+  margin-left: 0.5em;
+  font-size: 10px;
+}
+
+.removerFiltro:hover{
+  background: transparent;
+  border-color: transparent;
+  color: white;
+}
+
+#nomeSolicitacao{
+  font-size: 1.3em;
+  color:#006599;
+}
+.filtroLateral{
+  background-color: #e5e5e5;
+  border: 1px #d5d5d5 solid;
+  border-radius: 4px;
+  padding: 1em 1em;
+}
+.text-wrap {
+  white-space: normal !important;
+}
+.panel{border: none;}
+
+div.panel-heading.card-header{
+
+  background-color: white !important;
+  background-image: none !important;
+}
+
+.text-break {
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+.card-carroussel {
+  border-radius: 10px;
+  margin: 0 1em;
+  min-height: 10em;
+  padding: 1em;
+  text-align: center;
+  border: 1px solid #d5e1ed;
+  transition: all ease-in-out 0.3s;
+  background: #ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-carroussel:hover {
+  background: #dbe8fb;
+  border-color: #dbe8fb;
+}
+.menuLateral{
+  padding-top: 5px;
+    padding-left: 15px;
+    border: 1.4px ridge #e5e5e5;
+
+}
+
+.menuLateral > a {
+  cursor:pointer;
+  color: #2a6496;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border-color: #dddddd;
+}
+
+:focus-visible{
+  outline: none !important;
+}
+
+.owl-carousel .owl-item {
+  max-width:300px !important;
+}
+

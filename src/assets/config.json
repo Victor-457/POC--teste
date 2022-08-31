@@ -1,0 +1,9 @@
+{
+  "intervaloSalva": "1",
+  "intervaloMensagem": "1",
+  "versaoSistema": "0.0.60",
+  "maxContadorSalvamentos": "14",
+  "paginaInicial": 1,
+  "apiUrl": "http://buteno.anp.net:8080/nsimp-cadexterno-back/api/v1/",
+  "nomeAmbiente": "DESENVOLVIMENTO"
+}

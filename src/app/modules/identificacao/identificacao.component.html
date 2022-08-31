@@ -1,0 +1,250 @@
+
+  <div class="row">
+  <!--
+    --Filtro Lateral
+  -->
+    <div class="col-md-3 filtroLateral">
+      <!--
+      --Filtros aplicados
+      -->
+      <div>
+        <label *ngIf="atividadeReguladaSelecionada.nome != '' || filtrosAplicados.nome != '' || pesquisaRealizada != ''">Filtros aplicados:</label>
+        <div class="row">
+          <div class="col-md-12" *ngIf="filtrosAplicados.nome != ''" style="padding-top: 1em;">
+
+            <span>Produto: &nbsp;</span><br>
+            <span class="badge badge-primary text-wrap">
+              {{filtrosAplicados.nome}}
+              <button (click)="removerFiltro('produto');" type="button" class="btn btn-default removerFiltro" style="border-radius: 50%;">
+                  <b>X</b>
+              </button>
+            </span>
+          </div>
+          <div class="col-md-12" *ngIf="atividadeReguladaSelecionada.nome != ''" style="padding-top: 1em;">
+
+            <span>Atividade regulada: &nbsp;</span><br>
+            <span class="badge badge-primary text-wrap">
+              {{atividadeReguladaSelecionada.nome}}
+              <button (click)="removerFiltro('atividadeRegulada');" type="button" class="btn btn-default removerFiltro" style="border-radius: 50%;">
+                  <b>X</b>
+              </button>
+            </span>
+          </div>
+          <div class="col-md-12" *ngIf="qualificacaoSelecionada.nome != ''" style="padding-top: 1em;">
+
+            <span>Atividade: &nbsp;</span><br>
+            <span class="badge badge-primary text-wrap">
+              <span class="text-break">{{qualificacaoSelecionada.nome}}</span>
+              <button  (click)="removerFiltro('qualificacao');" type="button" class="btn btn-default removerFiltro" style="border-radius: 50%;">
+                  <b>X</b>
+              </button>
+            </span>
+          </div>
+          <div class="col-md-12" *ngIf="pesquisaRealizada != ''" style="padding-top: 1em;">
+
+            <span>Solicitação: &nbsp;</span><br>
+            <span class="badge badge-primary text-wrap">
+              <span class="text-break">{{pesquisaRealizada}}</span>
+              <button  (click)="removerFiltro('pesquisa');" type="button" class="btn btn-default removerFiltro" style="border-radius: 50%;">
+                  <b>X</b>
+              </button>
+            </span>
+          </div>
+        </div>
+        <hr *ngIf="atividadeReguladaSelecionada.nome != '' || filtrosAplicados.nome != '' || pesquisaRealizada != ''">
+      </div>
+      <!--
+      --Filtros disponíveis
+      -->
+      <div>
+        <label>Filtrar por:</label>
+        <accordion [closeOthers]="true">
+          <!--
+          --Filtro Atividade Regulada
+          -->
+          <accordion-group (isOpenChange)="aberturaAccordionAtividadeRegulada($event);">
+            <button
+              class="btn btn-link btn-block justify-content-between d-flex w-100  shadow-none"
+              accordion-heading type="button">
+              <div class="pull-left float-left">Atividade Regulada</div>
+              <span class="float-right pull-right">
+                <i *ngIf="!accordionAtividadeReguladaAberto" class="icon-plus-sign" style="font-size: 1.2em;"></i>
+                <i *ngIf="accordionAtividadeReguladaAberto" class="icon-minus-sign" style="font-size: 1.2em;"></i>
+              </span>
+            </button>
+
+            <div *ngFor="let atividadeRegulada of listaAtividadeRegulada">
+             <div class="menuLateral"  (click)="clicouAtividade(atividadeRegulada);"><a>{{atividadeRegulada.nome}}</a></div>
+            </div>
+
+          </accordion-group>
+          <!--
+          --Filtro Produto
+          -->
+            <accordion [closeOthers]="true">
+              <div *ngFor="let produtoPai of listaProdutoPai">
+                <accordion-group (isOpenChange)="montandoCaminhoAcordion(produtoPai.id,'1');">
+                  <button
+                    class="btn btn-link btn-block justify-content-between d-flex w-100  shadow-none"
+                    accordion-heading type="button">
+                    <div class="pull-left float-left">{{produtoPai.nome}}</div>
+                    <span class="float-right pull-right">
+                      <i *ngIf="!AcordionExpandido('1', produtoPai.id)" class="icon-plus-sign" style="font-size: 1.2em;"></i>
+                      <i *ngIf="AcordionExpandido('1', produtoPai.id)" class="icon-minus-sign" style="font-size: 1.2em;"></i>
+                    </span>
+                  </button>
+                  <accordion [closeOthers]="true">
+                    <div *ngFor="let produtoNv1 of encontrarProdutos(produtoPai.id)">
+                      <accordion-group (isOpenChange)="montandoCaminhoAcordion(produtoNv1.id,'2');" *ngIf="encontrarProdutos(produtoNv1.id).length > 0">
+                        <button
+                          class="btn btn-link btn-block justify-content-between d-flex w-100  shadow-none"
+                          accordion-heading type="button">
+                          <div class="pull-left float-left">{{produtoNv1.nome}}</div>
+                          <span class="float-right pull-right">
+                            <i *ngIf="!AcordionExpandido('2', produtoNv1.id)" class="icon-plus-sign" style="font-size: 1.2em;"></i>
+                            <i *ngIf="AcordionExpandido('2', produtoNv1.id)" class="icon-minus-sign" style="font-size: 1.2em;"></i>
+                          </span>
+                        </button>
+                        <div *ngFor="let produtoNv2 of encontrarProdutos(produtoNv1.id)">
+                          <div  class="menuLateral" (click)="clicouProduto(produtoNv2);">
+                            <a >{{produtoNv2.nome}}</a>
+                          </div>
+                        </div>
+                    </accordion-group>
+                    <div *ngIf="encontrarProdutos(produtoNv1.id).length == 0"  class="menuLateral" (click)="clicouProduto(produtoNv1);">
+                      <a>{{produtoNv1.nome}}</a>
+                    </div>
+                    </div>
+                  </accordion>
+              </accordion-group>
+              </div>
+            </accordion>
+          </accordion>
+      </div>
+    </div>
+  <!--
+    --Corpo da página
+  -->
+    <div class="col-md-9">
+      <!--
+      --Pesquisa
+      -->
+      <div class="row">
+        <!-- <div class="col-md-4">
+          <label>Qualificações</label>
+          <select class="form-control" style="width: 100%;">
+            <option *ngFor="let qualificacao of listaQualificacoes" >{{qualificacao.nome}}</option>
+          </select>
+        </div> -->
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-11">
+              <label>Pesquisar por título da solicitação:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-11">
+              <input type="text" (keyup.enter)="pesquisar();" placeholder="Título da solicitação" style="width: 100%; height: 34px;"
+              [(ngModel)]="pesquisa" class="form-control">
+            </div>
+            <div class="col-md-1">
+              <button type="button" class="btn btn-default" (click)="pesquisar();"><i class="icon-search"></i></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!--
+      --Carrossel Qualificações
+      -->
+      <div *ngIf="(filtrosAplicados.nome != '' || atividadeReguladaSelecionada.nome != '' || qualificacoesDisponiveis) && listaQualificacoes.length != 0 ">
+        <hr>
+        <div class="row">
+          <div class="col-md-12">
+            <label>Atividades disponíveis:</label>
+            <owl-carousel-o [options]="customOptions">
+              <ng-container *ngFor="let qualificacao of listaQualificacoes"  >
+                <ng-template  carouselSlide >
+                  <div class="card-carroussel" (click)="clicouQualificacao(qualificacao)" style="cursor:pointer;">
+                    <div class="row" style="min-height:150px;">
+                    <div class="col-md-12">
+                      <img src="../../../assets/images/{{qualificacao.image}}" style="    width: 70px;
+                      height: 70px;
+                      margin: 0 auto;"/>
+                      </div>
+                    <div class="col-md-12" style="padding-top: 12px;">
+                    <p style="cursor: pointer;"  >{{qualificacao.nome}}</p>
+                  </div>
+                  </div>
+                </div>
+                  </ng-template>
+              </ng-container>
+            </owl-carousel-o>
+          </div>
+        </div>
+
+      </div>
+
+      <hr>
+      <!--
+      --Lista Solicitações
+      -->
+      <div class="row">
+        <div *ngIf="listaSolicitacoes.length != 0" >
+          <div  *ngFor="let solicitacao of listaSolicitacoes">
+
+            <div class="col-md-4 " style="margin-top: 1.5em; padding-bottom: 1em; padding-left: 1em; padding-right: 1em;">
+              <div class="card" style="min-height: 20em; border-radius: 10px;">
+                <div class="card-body" style="min-height: 16em;">
+                  <div class="row">
+                    <div class="col-md-12 text-left" style="min-height: 4em;" [title]="solicitacao.nome">
+                        <b id="nomeSolicitacao">
+                          <a >{{solicitacao.nome}}</a>
+                        </b>
+                    </div>
+                    <br>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 text-left">
+                      <span>Atividade:&nbsp;</span><br>
+                      <div>
+                        <span class=" text-wrap" style="font-size: 11px; text-align: left;">
+                          {{solicitacao.nomeQualificacao}}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row" style="margin: 1em 0;">
+                    <div class="col-md-12 text-left">
+                      <span>Tipo instalação:&nbsp;</span><br>
+                      <div class="">
+                        <span class="text-wrap" style="font-size: 11px; text-align: left !important;">
+                          {{solicitacao.nomeTipoInstalacao}}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="card-footer">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <button type="button" class="btn btn-primary" style=" margin-top: 1em; margin-bottom: 1em;">Selecionar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-12 text-center" *ngIf="listaSolicitacoes.length == 0" style="margin-top: 1em;">
+          <b>Nenhuma solicitação encontrada para a pesquisa</b>
+        </div>
+      </div>
+    </div>
+  </div>
+

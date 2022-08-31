@@ -1,0 +1,686 @@
+{
+  "atividaderegulada":[
+    {"id":1,"nome":"Agente vendedor de gás natural", "indativo":"s"},
+    {"id":2,"nome":"Autoprodutor", "indativo":"s"},
+    {"id":3,"nome":"Autoimportador", "indativo":"s"},
+    {"id":4,"nome":"Carregador", "indativo":"s"},
+    {"id":5,"nome":"Coletor", "indativo":"s"},
+    {"id":6,"nome":"Comercializador de gás natural na esfera da união", "indativo":"s"},
+    {"id":7,"nome":"Comércio exterior", "indativo":"s"},
+    {"id":8,"nome":"Consumidor industrial", "indativo":"s"},
+    {"id":9,"nome":"Contratante", "indativo":"s"},
+    {"id":10,"nome":"Distribuição", "indativo":"s"},
+    {"id":11,"nome":"Empresa de navegação", "indativo":"s"},
+    {"id":12,"nome":"Fornecedor", "indativo":"s"},
+    {"id":13,"nome":"Inspeção de qualidade", "indativo":"s"},
+    {"id":14,"nome":"Inutilizador", "indativo":"s"},
+    {"id":15,"nome":"Lubrificante", "indativo":"s"},
+    {"id":16,"nome":"Operador", "indativo":"s"},
+    {"id":17,"nome":"Ponto de abastecimento", "indativo":"s"},
+    {"id":18,"nome":"Posto de combustíveis", "indativo":"s"},
+    {"id":19,"nome":"Projeto uso próprio", "indativo":"s"},
+    {"id":20,"nome":"Projeto estruturante", "indativo":"s"},
+    {"id":21,"nome":"Produtor", "indativo":"s"},
+    {"id":22,"nome":"Requalificador", "indativo":"s"},
+    {"id":23,"nome":"Rerefino", "indativo":"s"},
+    {"id":24,"nome":"Revenda de GLP", "indativo":"s"},
+    {"id":25,"nome":"TRR", "indativo":"s"}
+  ],
+  "produto":[
+    {"id":1,"nome":"Petróleo e derivados", "idPai":""},
+    {"id":2,"nome":"Gás natural", "idPai":""},
+    {"id":3,"nome":"Biocombustível", "idPai":""},
+    {"id":4,"nome":"Gasolina", "idPai":"1"},
+    {"id":5,"nome":"Diesel", "idPai":"1"},
+    {"id":6,"nome":"Lubrificante", "idPai":"1"},
+    {"id":7,"nome":"Querosene", "idPai":"1"},
+    {"id":8,"nome":"Asfalto", "idPai":"1"},
+    {"id":9,"nome":"Solventes", "idPai":"1"},
+    {"id":10,"nome":"Gás Liquefeito de Petróleo", "idPai":"1"},
+    {"id":11,"nome":"Gás Natural Comprimido", "idPai":"2"},
+    {"id":12,"nome":"Gás Natural Liquefeito GNL", "idPai":"2"},
+    {"id":13,"nome":"Biodiesel", "idPai":"3"},
+    {"id":14,"nome":"Etanol", "idPai":"3"},
+    {"id":15,"nome":"Metanol", "idPai":"3"},
+    {"id":16,"nome":"Gasolina Automotiva", "idPai":"4"},
+    {"id":17,"nome":"Gasolina de Aviação", "idPai":"4"},
+    {"id":18,"nome":"Óleo Diesel", "idPai":"5"},
+    {"id":19,"nome":"Óleo lubrificante", "idPai":"6"},
+    {"id":20,"nome":"Querosene de Aviação", "idPai":"7"},
+    {"id":21,"nome":"Querosene de Aviação Alternativo", "idPai":"7"}
+  ],
+  "perfilSolicitacao":[
+    {"id":1, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"COMÉRCIO EXTERIOR","nomeQualificacao":"AGENTE DE COMÉRCIO EXTERIOR", "idQualificacao":"1"},
+    {"id":2, "nome":"Autorização de Operação", "nomeTipoInstalacao":"COMÉRCIO EXTERIOR","nomeQualificacao":"AGENTE DE COMÉRCIO EXTERIOR", "idQualificacao":"1"},
+    {"id":3, "nome":"Cancelamento de Autorização", "nomeTipoInstalacao":"COMÉRCIO EXTERIOR","nomeQualificacao":"AGENTE DE COMÉRCIO EXTERIOR", "idQualificacao":"1"},
+
+    {"id":4, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"INSTALAÇÃO DE AUTOPRODUTOR","nomeQualificacao":"AUTOPRODUTOR", "idQualificacao":"14"},
+    {"id":5, "nome":"Autorização de Operação", "nomeTipoInstalacao":"INSTALAÇÃO DE AUTOPRODUTOR","nomeQualificacao":"AUTOPRODUTOR", "idQualificacao":"14"},
+    {"id":6, "nome":"Cancelamento de Autorização", "nomeTipoInstalacao":"INSTALAÇÃO DE AUTOPRODUTOR","nomeQualificacao":"AUTOPRODUTOR", "idQualificacao":"14"},
+
+    {"id":7, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"CARREGADOR DE GÁS NATURAL","nomeQualificacao":"INSTALAÇÃO DE CARREGADOR DE GÁS NATURAL", "idQualificacao":"2"},
+    {"id":8, "nome":"Autorização de Operação", "nomeTipoInstalacao":"CARREGADOR DE GÁS NATURAL","nomeQualificacao":"INSTALAÇÃO DE CARREGADOR DE GÁS NATURAL", "idQualificacao":"2"},
+    {"id":9, "nome":"Cancelamento de Autorização", "nomeTipoInstalacao":"CARREGADOR DE GÁS NATURAL","nomeQualificacao":"INSTALAÇÃO DE CARREGADOR DE GÁS NATURAL", "idQualificacao":"2"},
+
+    {"id":10, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"INSTALAÇÃO DE CARREGADOR DE LÍQUIDOS","nomeQualificacao":"CARREGADOR DE PETRÓLEO E COMBUSTÍVEIS LÍQUIDOS", "idQualificacao":"3"},
+    {"id":11, "nome":"Autorização de Operação", "nomeTipoInstalacao":"INSTALAÇÃO DE CARREGADOR DE LÍQUIDOS","nomeQualificacao":"CARREGADOR DE PETRÓLEO E COMBUSTÍVEIS LÍQUIDOS", "idQualificacao":"3"},
+    {"id":12, "nome":"Cancelamento de Autorização", "nomeTipoInstalacao":"INSTALAÇÃO DE CARREGADOR DE LÍQUIDOS","nomeQualificacao":"CARREGADOR DE PETRÓLEO E COMBUSTÍVEIS LÍQUIDOS", "idQualificacao":"3"},
+
+    {"id":13, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"COMERCIAL EXPORTADORA","nomeQualificacao":"COMERCIAL EXPORTADORA", "idQualificacao":"6"},
+    {"id":14, "nome":"Autorização de Operação", "nomeTipoInstalacao":"COMERCIAL EXPORTADORA","nomeQualificacao":"COMERCIAL EXPORTADORA", "idQualificacao":"6"},
+    {"id":15, "nome":"Cancelamento de Autorização", "nomeTipoInstalacao":"COMERCIAL EXPORTADORA","nomeQualificacao":"COMERCIAL EXPORTADORA", "idQualificacao":"6"},
+
+    {"id":16, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"ADMINISTRATIVA DE ASFALTO","nomeQualificacao":"DISTRIBUIDOR DE ASFALTO", "idQualificacao":"9"},
+    {"id":17, "nome":"Autorização de Operação", "nomeTipoInstalacao":"ADMINISTRATIVA DE ASFALTO","nomeQualificacao":"DISTRIBUIDOR DE ASFALTO", "idQualificacao":"9"},
+    {"id":18, "nome":"Cancelamento de Autorização", "nomeTipoInstalacao":"ADMINISTRATIVA DE ASFALTO","nomeQualificacao":"DISTRIBUIDOR DE ASFALTO", "idQualificacao":"9"},
+
+    {"id":19, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"BASES DO RAMO DE ASFALTOS","nomeQualificacao":"DISTRIBUIDOR DE ASFALTO", "idQualificacao":"9"},
+    {"id":20, "nome":"Autorização de Operação", "nomeTipoInstalacao":"BASES DO RAMO DE ASFALTOS","nomeQualificacao":"DISTRIBUIDOR DE ASFALTO", "idQualificacao":"9"},
+    {"id":21, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"BASES DO RAMO DE ASFALTOS","nomeQualificacao":"DISTRIBUIDOR DE ASFALTO", "idQualificacao":"9"},
+
+    {"id":22, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"ADMINISTRATIVA MATRIZ COMBUSTÍVEIS LÍQUIDOS","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS", "idQualificacao":"10"},
+    {"id":23, "nome":"Autorização de Operação", "nomeTipoInstalacao":"ADMINISTRATIVA MATRIZ COMBUSTÍVEIS LÍQUIDOS","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS", "idQualificacao":"10"},
+    {"id":24, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"ADMINISTRATIVA MATRIZ COMBUSTÍVEIS LÍQUIDOS","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS", "idQualificacao":"10"},
+
+    {"id":25, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"BASES DO RAMO DE COMBUSTÍVEIS","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS", "idQualificacao":"10"},
+    {"id":26, "nome":"Autorização de Operação", "nomeTipoInstalacao":"BASES DO RAMO DE COMBUSTÍVEIS","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS", "idQualificacao":"10"},
+    {"id":27, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"BASES DO RAMO DE COMBUSTÍVEIS","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS", "idQualificacao":"10"},
+
+    {"id":28, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"ADMINISTRADO EM BASE COMPARTILHADA","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS", "idQualificacao":"10"},
+    {"id":29, "nome":"Autorização de Operação", "nomeTipoInstalacao":"ADMINISTRADO EM BASE COMPARTILHADA","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS", "idQualificacao":"10"},
+    {"id":30, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"ADMINISTRADO EM BASE COMPARTILHADA","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS", "idQualificacao":"10"},
+
+    {"id":31, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"CESSIONÁRIA DO RAMO DE COMBUSTÍVEIS","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS", "idQualificacao":"10"},
+    {"id":32, "nome":"Autorização de Operação", "nomeTipoInstalacao":"CESSIONÁRIA DO RAMO DE COMBUSTÍVEIS","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS", "idQualificacao":"10"},
+    {"id":33, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"CESSIONÁRIA DO RAMO DE COMBUSTÍVEIS","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS", "idQualificacao":"10"},
+
+    {"id":34, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"CONTRATO DE CARREGAMENTO","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS", "idQualificacao":"10"},
+    {"id":35, "nome":"Autorização de Operação", "nomeTipoInstalacao":"CONTRATO DE CARREGAMENTO","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS", "idQualificacao":"10"},
+    {"id":36, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"CONTRATO DE CARREGAMENTO","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS", "idQualificacao":"10"},
+
+    {"id":37, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"FILIAL ADMINISTRATIVA DE AVIAÇÃO","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS AVIAÇÃO", "idQualificacao":"11"},
+    {"id":38, "nome":"Autorização de Operação", "nomeTipoInstalacao":"FILIAL ADMINISTRATIVA DE AVIAÇÃO","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS AVIAÇÃO","idQualificacao":"11"},
+    {"id":39, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"FILIAL ADMINISTRATIVA DE AVIAÇÃO","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS AVIAÇÃO","idQualificacao":"11"},
+
+    {"id":40, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"BASES DO RAMO DE AVIAÇÃO","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS AVIAÇÃO","idQualificacao":"11"},
+    {"id":41, "nome":"Autorização de Operação", "nomeTipoInstalacao":"BASES DO RAMO DE AVIAÇÃO","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS AVIAÇÃO","idQualificacao":"11"},
+    {"id":42, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"BASES DO RAMO DE AVIAÇÃO","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS AVIAÇÃO","idQualificacao":"11"},
+
+    {"id":43, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"PARQUE DE ABASTECIMENTO DE AERONAVES","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS AVIAÇÃO","idQualificacao":"11"},
+    {"id":44, "nome":"Autorização de Operação", "nomeTipoInstalacao":"PARQUE DE ABASTECIMENTO DE AERONAVES","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS AVIAÇÃO","idQualificacao":"11"},
+    {"id":45, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"PARQUE DE ABASTECIMENTO DE AERONAVES","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS AVIAÇÃO","idQualificacao":"11"},
+
+    {"id":46, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"INSTALAÇÃO DE DISTRIBUIDOR DE GNC","nomeQualificacao":"DISTRIBUIDOR DE GNC" ,"idQualificacao":"19"},
+    {"id":47, "nome":"Autorização de Operação", "nomeTipoInstalacao":"INSTALAÇÃO DE DISTRIBUIDOR DE GNC","nomeQualificacao":"DISTRIBUIDOR DE GNC" ,"idQualificacao":"19"},
+    {"id":48, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"INSTALAÇÃO DE DISTRIBUIDOR DE GNC","nomeQualificacao":"DISTRIBUIDOR DE GNC","idQualificacao":"19"},
+
+    {"id":49, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"INSTALAÇÃO DE DISTRIBUIDOR DE GNL","nomeQualificacao":"DISTRIBUIDOR DE GNL" ,"idQualificacao":"20"},
+    {"id":50, "nome":"Autorização de Operação", "nomeTipoInstalacao":"INSTALAÇÃO DE DISTRIBUIDOR DE GNL","nomeQualificacao":"DISTRIBUIDOR DE GNL","idQualificacao":"20"},
+    {"id":51, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"INSTALAÇÃO DE DISTRIBUIDOR DE GNL","nomeQualificacao":"DISTRIBUIDOR DE GNL","idQualificacao":"20"},
+
+    {"id":52, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"BASES DO RAMO DE LIQUEFEITOS","nomeQualificacao":"DISTRIBUIDOR DE LIQUEFEITOS" ,"idQualificacao":"17"},
+    {"id":53, "nome":"Autorização de Operação", "nomeTipoInstalacao":"BASES DO RAMO DE LIQUEFEITOS","nomeQualificacao":"DISTRIBUIDOR DE LIQUEFEITOS","idQualificacao":"17"},
+    {"id":54, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"BASES DO RAMO DE LIQUEFEITOS","nomeQualificacao":"DISTRIBUIDOR DE LIQUEFEITOS","idQualificacao":"17"},
+
+    {"id":55, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"DEPÓSITO DE GLP","nomeQualificacao":"DISTRIBUIDOR DE LIQUEFEITOS","idQualificacao":"17"},
+    {"id":56, "nome":"Autorização de Operação", "nomeTipoInstalacao":"DEPÓSITO DE GLP","nomeQualificacao":"DISTRIBUIDOR DE LIQUEFEITOS","idQualificacao":"17"},
+    {"id":57, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"DEPÓSITO DE GLP","nomeQualificacao":"DISTRIBUIDOR DE LIQUEFEITOS","idQualificacao":"17"},
+
+    {"id":58, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"CESSIONÁRIA GLP","nomeQualificacao":"DISTRIBUIDOR DE LIQUEFEITOS","idQualificacao":"17"},
+    {"id":59, "nome":"Autorização de Operação", "nomeTipoInstalacao":"CESSIONÁRIA GLP","nomeQualificacao":"DISTRIBUIDOR DE LIQUEFEITOS","idQualificacao":"17"},
+    {"id":60, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"CESSIONÁRIA GLP","nomeQualificacao":"DISTRIBUIDOR DE LIQUEFEITOS","idQualificacao":"17"},
+
+    {"id":61, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"ADMINISTRATIVA MATRIZ GLP","nomeQualificacao":"DISTRIBUIDOR DE LIQUEFEITOS","idQualificacao":"17"},
+    {"id":62, "nome":"Autorização de Operação", "nomeTipoInstalacao":"ADMINISTRATIVA MATRIZ GLP","nomeQualificacao":"DISTRIBUIDOR DE LIQUEFEITOS","idQualificacao":"17"},
+    {"id":63, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"ADMINISTRATIVA MATRIZ GLP","nomeQualificacao":"DISTRIBUIDOR DE LIQUEFEITOS","idQualificacao":"17"},
+
+    {"id":64, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"ADMINISTRATIVA MATRIZ SOLVENTES","nomeQualificacao":"DISTRIBUIDOR DE SOLVENTES" ,"idQualificacao":"18"},
+    {"id":65, "nome":"Autorização de Operação", "nomeTipoInstalacao":"ADMINISTRATIVA MATRIZ SOLVENTES","nomeQualificacao":"DISTRIBUIDOR DE SOLVENTES" ,"idQualificacao":"18"},
+    {"id":66, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"ADMINISTRATIVA MATRIZ SOLVENTES","nomeQualificacao":"DISTRIBUIDOR DE SOLVENTES" ,"idQualificacao":"18"},
+
+    {"id":67, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"BASES DO RAMO DE SOLVENTES","nomeQualificacao":"DISTRIBUIDOR DE SOLVENTES" ,"idQualificacao":"18"},
+    {"id":68, "nome":"Autorização de Operação", "nomeTipoInstalacao":"BASES DO RAMO DE SOLVENTES","nomeQualificacao":"DISTRIBUIDOR DE SOLVENTES" ,"idQualificacao":"18"},
+    {"id":69, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"BASES DO RAMO DE SOLVENTES","nomeQualificacao":"DISTRIBUIDOR DE SOLVENTES" ,"idQualificacao":"18"},
+
+    {"id":70, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"CESSIONÁRIA DO RAMO DE SOLVENTES","nomeQualificacao":"DISTRIBUIDOR DE SOLVENTES" ,"idQualificacao":"18"},
+    {"id":71, "nome":"Autorização de Operação", "nomeTipoInstalacao":"CESSIONÁRIA DO RAMO DE SOLVENTES","nomeQualificacao":"DISTRIBUIDOR DE SOLVENTES" ,"idQualificacao":"18"},
+    {"id":72, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"CESSIONÁRIA DO RAMO DE SOLVENTES","nomeQualificacao":"DISTRIBUIDOR DE SOLVENTES" ,"idQualificacao":"18"},
+
+    {"id":73, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"DEPÓSITO DE ENVASADOS","nomeQualificacao":"DISTRIBUIDOR DE SOLVENTES" ,"idQualificacao":"18"},
+    {"id":74, "nome":"Autorização de Operação", "nomeTipoInstalacao":"DEPÓSITO DE ENVASADOS","nomeQualificacao":"DISTRIBUIDOR DE SOLVENTES" ,"idQualificacao":"18"},
+    {"id":75, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"DEPÓSITO DE ENVASADOS","nomeQualificacao":"DISTRIBUIDOR DE SOLVENTES" ,"idQualificacao":"18"},
+
+    {"id":76, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"DUTO DE METANOL","nomeQualificacao":"OPERADOR DE DUTO DE METANOL"  ,"idQualificacao":"35"},
+    {"id":77, "nome":"Autorização de Operação", "nomeTipoInstalacao":"DUTO DE METANOL","nomeQualificacao":"OPERADOR DE DUTO DE METANOL" ,"idQualificacao":"35"},
+    {"id":78, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"DUTO DE METANOL","nomeQualificacao":"OPERADOR DE DUTO DE METANOL" ,"idQualificacao":"35"},
+
+    {"id":79, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"GASODUTO","nomeQualificacao":"OPERADOR DE GASODUTO"  ,"idQualificacao":"31"},
+    {"id":80, "nome":"Autorização de Operação", "nomeTipoInstalacao":"GASODUTO","nomeQualificacao":"OPERADOR DE GASODUTO" ,"idQualificacao":"31"},
+    {"id":81, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"GASODUTO","nomeQualificacao":"OPERADOR DE GASODUTO" ,"idQualificacao":"31"},
+
+    {"id":82, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"ESTAÇÃO DE DISTRIBUIÇÃO DE GÁS NATURAL","nomeQualificacao":"OPERADOR DE GASODUTO" ,"idQualificacao":"31"},
+    {"id":83, "nome":"Autorização de Operação", "nomeTipoInstalacao":"ESTAÇÃO DE DISTRIBUIÇÃO DE GÁS NATURAL","nomeQualificacao":"OPERADOR DE GASODUTO" ,"idQualificacao":"31"},
+    {"id":84, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"ESTAÇÃO DE DISTRIBUIÇÃO DE GÁS NATURAL","nomeQualificacao":"OPERADOR DE GASODUTO" ,"idQualificacao":"31"},
+
+    {"id":85, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"OLEODUTO","nomeQualificacao":"OPERADOR DE OLEODUTO" ,"idQualificacao":"30"},
+    {"id":86, "nome":"Autorização de Operação", "nomeTipoInstalacao":"OLEODUTO","nomeQualificacao":"OPERADOR DE OLEODUTO" ,"idQualificacao":"30"},
+    {"id":87, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"OLEODUTO","nomeQualificacao":"OPERADOR DE OLEODUTO" ,"idQualificacao":"30"},
+
+    {"id":88, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"PLANTA DE PRODUÇÃO DE BIODIESEL","nomeQualificacao":"PRODUTOR DE BIODIESEL"  ,"idQualificacao":"43"},
+    {"id":89, "nome":"Autorização de Operação", "nomeTipoInstalacao":"PLANTA DE PRODUÇÃO DE BIODIESEL","nomeQualificacao":"PRODUTOR DE BIODIESEL" ,"idQualificacao":"43"},
+    {"id":90, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"PLANTA DE PRODUÇÃO DE BIODIESEL","nomeQualificacao":"PRODUTOR DE BIODIESEL" ,"idQualificacao":"43"},
+
+    {"id":91, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"PRODUTOR DE BIOMETANO","nomeQualificacao":"PRODUTOR DE BIOMETANO"  ,"idQualificacao":"44"},
+    {"id":92, "nome":"Autorização de Operação", "nomeTipoInstalacao":"PRODUTOR DE BIOMETANO","nomeQualificacao":"PRODUTOR DE BIOMETANO" ,"idQualificacao":"44"},
+    {"id":93, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"PRODUTOR DE BIOMETANO","nomeQualificacao":"PRODUTOR DE BIOMETANO" ,"idQualificacao":"44"},
+
+    {"id":94, "nome":"Alteração Cadastral", "nomeTipoInstalacao":"ADMINISTRATIVA MATRIZ COMBUSTÍVEIS DE AVIAÇÃO","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS AVIAÇÃO", "idQualificacao":"11"},
+    {"id":95, "nome":"Autorização de Operação", "nomeTipoInstalacao":"ADMINISTRATIVA MATRIZ COMBUSTÍVEIS DE AVIAÇÃO","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS AVIAÇÃO", "idQualificacao":"11"},
+    {"id":96, "nome":"Cancelamento de Autorização",  "nomeTipoInstalacao":"ADMINISTRATIVA MATRIZ COMBUSTÍVEIS DE AVIAÇÃO","nomeQualificacao":"DISTRIBUIDOR DE COMBUSTÍVEIS AVIAÇÃO", "idQualificacao":"11"}
+
+  ],
+  "qualificacao":[
+      {
+        "id": 1,
+        "nome": "Agente de comércio exterior",
+        "cod_atividade_perfil": 7,
+        "image": "refinador-petroleo.png"
+      },
+      {
+        "id": 2,
+        "nome": "Carregador de gás natural",
+        "cod_atividade_perfil": 4,
+        "image":"gas-natural.png"
+      },
+      {
+        "id": 3,
+        "nome": "Carregador de petróleo e combustíveis líquidos",
+        "cod_atividade_perfil": 4,
+        "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 4,
+       "nome": "Central petroquímica",
+       "cod_atividade_perfil": 21,
+       "image":"central-pretoquimica.png"
+      },
+      {
+        "id": 5,
+        "nome": "Coletor de óleo lubrificante usado ou contaminado",
+        "cod_atividade_perfil": 5,
+        "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 6,
+       "nome": "Comercial exportadora",
+       "cod_atividade_perfil": 7,
+       "image": "refinador-petroleo.png"
+      },
+      {
+        "id": 7,
+        "nome": "Comercializador de gás natural na esfera da união",
+        "cod_atividade_perfil": 6
+      },
+      {
+       "id": 8,
+       "nome": "Consumidor industrial de solvente",
+       "cod_atividade_perfil": 8,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 9,
+       "nome": "Distribuidor de asfalto",
+       "cod_atividade_perfil": 10,
+       "image": "distribuidor-de-asfalto.png"
+      },
+      {
+       "id": 10,
+       "nome": "Distribuidor de combustíveis",
+       "cod_atividade_perfil": 10,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 11,
+       "nome": "Distribuidor de combustíveis aviação",
+       "cod_atividade_perfil": 10,
+       "image": "distribuidor-combustiveis-aviacao.png"
+      },
+      {
+       "id": 12,
+       "nome": "Fornecedor de etanol",
+       "cod_atividade_perfil": 12,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 13,
+       "nome": "Agente vendedor de gás natural",
+       "cod_atividade_perfil": 1,
+       "image": "gas-natural.png"
+      },
+      {
+       "id": 14,
+       "nome": "Autoprodutor",
+       "cod_atividade_perfil": 2,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 15,
+       "nome": "Autoimportador",
+       "cod_atividade_perfil": 3,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 16,
+       "nome": "Contratante de prestação de serviços",
+       "cod_atividade_perfil": 9,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 17,
+       "nome": "Distribuidor de liquefeitos",
+       "cod_atividade_perfil": 10,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 18,
+       "nome": "Distribuidor de solventes",
+       "cod_atividade_perfil": 10,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 19,
+       "nome": "Distribuidor de GNC",
+       "cod_atividade_perfil": 10,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 20,
+       "nome": "Distribuidor de GNL",
+       "cod_atividade_perfil": 10,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 21,
+       "nome": "Empresa de navegação",
+       "cod_atividade_perfil": 11,
+       "image": "empresa-de-navegacao.png"
+      },
+      {
+       "id": 22,
+       "nome": "Empresa de inspeção da qualidade",
+       "cod_atividade_perfil": 13,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 23,
+       "nome": "Inutilizador",
+       "cod_atividade_perfil": 14,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 24,
+       "nome": "Produtor de óleo lubrificante acabado automotivo e industrial",
+       "cod_atividade_perfil": 15,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 25,
+       "nome": "Operador de central de distribuição de GNL",
+       "cod_atividade_perfil": 16,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 26,
+       "nome": "Operador de terminal",
+       "cod_atividade_perfil": 16,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 27,
+       "nome": "Operador de terminal de GNL",
+       "cod_atividade_perfil": 16,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 28,
+       "nome": "Operador de unidade de liquefação de GNL",
+       "cod_atividade_perfil": 16,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 29,
+       "nome": "Operador de unidade de regaseificação de GNL",
+       "cod_atividade_perfil": 16,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 30,
+       "nome": "Operador de oleoduto",
+       "cod_atividade_perfil": 16,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 31,
+       "nome": "Operador de gasoduto",
+       "cod_atividade_perfil": 16,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 32,
+       "nome": "Operador de ship to ship",
+       "cod_atividade_perfil": 16,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 33,
+       "nome": "Operador de unidade de compressão de GNC",
+       "cod_atividade_perfil": 16,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 34,
+       "nome": "Operador de terminal de metanol",
+       "cod_atividade_perfil": 16,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 35,
+       "nome": "Operador de duto de metanol",
+       "cod_atividade_perfil": 16,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 36,
+       "nome": "Ponto de abastecimento",
+       "cod_atividade_perfil": 17,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 37,
+       "nome": "Posto de combustíveis",
+       "cod_atividade_perfil": 18,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 38,
+       "nome": "Projeto para uso próprio de GNC",
+       "cod_atividade_perfil": 19,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 39,
+       "nome": "Projeto estruturante de GNC",
+       "cod_atividade_perfil": 20,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 40,
+       "nome": "Produtor de etanol",
+       "cod_atividade_perfil": 21,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 41,
+       "nome": "Formulador de combustíveis",
+       "cod_atividade_perfil": 21,
+       "image": "FORMULADOR DE COMBUSTÍVEIS.png"
+      },
+      {
+       "id": 42,
+       "nome": "Processador de gás natural",
+       "cod_atividade_perfil": 21,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 43,
+       "nome": "Produtor de biodiesel",
+       "cod_atividade_perfil": 21,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 44,
+       "nome": "Produtor de biometano",
+       "cod_atividade_perfil": 21,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 45,
+       "nome": "Produtor de solventes",
+       "cod_atividade_perfil": 21,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 46,
+       "nome": "Refinador de petróleo",
+       "cod_atividade_perfil": 21,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 47,
+       "nome": "Requalificador",
+       "cod_atividade_perfil": 22,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 48,
+       "nome": "Rerrefinador",
+       "cod_atividade_perfil": 23,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 49,
+       "nome": "Ponto de revenda de GLP",
+       "cod_atividade_perfil": 24,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 50,
+       "nome": "TRR",
+       "cod_atividade_perfil": 25,
+       "image": "refinador-petroleo.png"
+      },
+      {
+       "id": 51,
+       "nome": "TRRNI",
+       "cod_atividade_perfil": 25,
+       "image": "refinador-petroleo.png"
+      }
+   ],
+  "qualificacao_produto":[
+    {
+    "cod_qualificacao": 1,
+    "cod_produto_perfil": 8,
+    "ind_ativo": "s"
+    },
+    {
+    "cod_qualificacao": 1,
+    "cod_produto_perfil": 9,
+    "ind_ativo": "s"
+    },
+    {
+    "cod_qualificacao": 1,
+    "cod_produto_perfil": 10,
+    "ind_ativo": "s"
+    },
+    {
+    "cod_qualificacao": 1,
+    "cod_produto_perfil":11,
+    "ind_ativo": "s"
+    },
+    {
+    "cod_qualificacao": 1,
+    "cod_produto_perfil": 12,
+    "ind_ativo": "s"
+    },
+    {
+    "cod_qualificacao": 1,
+    "cod_produto_perfil": 13,
+    "ind_ativo": "s"
+    },
+    {
+    "cod_qualificacao": 1,
+    "cod_produto_perfil": 14,
+    "ind_ativo": "s"
+    },
+    {
+    "cod_qualificacao": 1,
+    "cod_produto_perfil": 15,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 2,
+    "cod_produto_perfil": 11,
+    "ind_ativo": "s"
+    },
+    {
+    "cod_qualificacao": 2,
+    "cod_produto_perfil": 12,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 3,
+    "cod_produto_perfil": 13,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 3,
+    "cod_produto_perfil": 14,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 3,
+    "cod_produto_perfil": 16,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 3,
+    "cod_produto_perfil": 17,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 3,
+    "cod_produto_perfil": 18,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 3,
+    "cod_produto_perfil": 20,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 3,
+    "cod_produto_perfil": 21,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 4,
+    "cod_produto_perfil": 8,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 4,
+    "cod_produto_perfil": 9,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 4,
+    "cod_produto_perfil": 10,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 5,
+    "cod_produto_perfil": 19,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 6,
+    "cod_produto_perfil": 8,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 6,
+    "cod_produto_perfil": 9,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 6,
+    "cod_produto_perfil": 10,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 6,
+    "cod_produto_perfil": 11,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 6,
+    "cod_produto_perfil": 12,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 6,
+    "cod_produto_perfil": 13,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 6,
+    "cod_produto_perfil": 14,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 6,
+    "cod_produto_perfil": 15,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 7,
+    "cod_produto_perfil": 11,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 7,
+    "cod_produto_perfil": 12,
+    "ind_ativo": "s"
+    },
+   {
+    "cod_qualificacao": 8,
+    "cod_produto_perfil": 9,
+    "ind_ativo": "s"
+    },
+    {
+    "cod_qualificacao": 9,
+    "cod_produto_perfil": 8,
+    "ind_ativo": "s"
+    },
+    {
+    "cod_qualificacao": 10,
+    "cod_produto_perfil": 16,
+    "ind_ativo": "s"
+    },
+    {
+    "cod_qualificacao": 10,
+    "cod_produto_perfil": 18,
+    "ind_ativo": "s"
+    },
+    {
+    "cod_qualificacao": 11,
+    "cod_produto_perfil": 17,
+    "ind_ativo": "s"
+    },
+    {
+    "cod_qualificacao": 11,
+    "cod_produto_perfil": 20,
+    "ind_ativo": "s"
+    },
+    {
+    "cod_qualificacao": 11,
+    "cod_produto_perfil": 21,
+    "ind_ativo": "s"
+    },
+    {
+    "cod_qualificacao": 12,
+    "cod_produto_perfil": 14,
+    "ind_ativo": "s"
+    }
+ ]
+}

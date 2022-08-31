@@ -1,0 +1,64 @@
+trigger:
+- develop
+
+pool:
+  'piranema-build'
+
+steps:
+
+- task: NodeTool@0
+  inputs:
+    versionSpec: 12.14
+  displayName: 'Use Node 12.14'
+
+- task: Npm@1
+  inputs:
+    command: 'install'
+  displayName: 'npm install @angular/cli'
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run build -- --configuration=production -- --base-href=/anp-nsimp-web/'
+  displayName: 'build angular'
+
+- task: FileTransform@1
+  inputs:
+    folderPath: '$(System.DefaultWorkingDirectory)'
+    fileType: 'json'
+    targetFiles: '**/assets/config.json'
+#   Execute um script de linha de comando para criacao do war que sera implantado no
+# JBoss
+- task: CmdLine@2
+  inputs:
+   script: |
+             echo inicio - criacao do war
+             cd $(Build.SourcesDirectory)\dist\anp-nsimp-web\
+             "C:\Program Files\Java\jdk-11.0.10\bin\jar.exe" -cvf $(Build.SourcesDirectory)\dist\anp-nsimp-web\anp-nsimp-web.war *
+             echo fim
+  displayName: 'Criacao do war (JBoss)'
+
+#   Executa um script que copia o arquivo war gerado para um destino usando padrões 
+# do Azure DevOps
+- task: CmdLine@2
+  inputs:
+   script: |
+             echo inicio - tranferindo para um destino usando padrões
+             copy $(Build.SourcesDirectory)\dist\anp-nsimp-web\anp-nsimp-web.war $(Build.ArtifactStagingDirectory)
+             dir $(Build.ArtifactStagingDirectory)
+             echo fim
+  displayName: 'Tranferindo para um destino usando padrões Azure'
+
+#   Copia os arquivos de uma pasta de origem para uma pasta de destino usando padroes 
+# que correspondam a caminhos de arquivo (nao caminhos de pasta)
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: $(Build.ArtifactStagingDirectory)
+    contents: '**/*.war'
+    targetFolder: $(Build.ArtifactStagingDirectory)
+
+#   Publica artefatos de compilação no Azure Pipelines
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: BuildOutputs
