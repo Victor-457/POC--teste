@@ -175,6 +175,7 @@ export class IdentificacaoComponent implements OnInit {
     this.qualificacoesDisponiveis = false
     if(filtro == "atividadeRegulada"){
       this.atividadeReguladaSelecionada = {"id": -1, "nome": "", "indativo": "n"}
+      this.qualificacaoSelecionada = {"id": -1, "nome": "", "cod_atividade_perfil": -1}
       this.pesquisar()
     }
     if(filtro == "produto"){
