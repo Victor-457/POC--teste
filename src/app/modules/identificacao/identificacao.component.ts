@@ -185,8 +185,12 @@ export class IdentificacaoComponent implements OnInit {
     else if(filtro == "qualificacao"){
       this.qualificacaoSelecionada = {"id": -1, "nome": "", "cod_atividade_perfil": -1}
 
-      this.atividadeReguladaSelecionada.id != -1 ? this.clicouAtividade(this.atividadeReguladaSelecionada)
-                                                 : this.clicouProduto(this.filtrosAplicados)
+      if(this.atividadeReguladaSelecionada.id != -1)
+        this.clicouAtividade(this.atividadeReguladaSelecionada)
+      else if(this.filtrosAplicados.id != -1)
+        this.clicouProduto(this.filtrosAplicados)
+      else
+        this.pesquisar()
     }
 
     else if(filtro == "pesquisa"){
